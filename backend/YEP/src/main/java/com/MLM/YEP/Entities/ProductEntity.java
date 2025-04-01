@@ -3,6 +3,9 @@ package com.MLM.YEP.Entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.Date;
+
 @Entity
 @Data
 @Table(name = "product")
@@ -14,4 +17,10 @@ public class ProductEntity {
     private String description ;
     private Double price ;
     private String url ;
+    private Boolean isDeleted ;
+    private Date createdAt ;
+    private Date updatedAt ;
 }
+
+
+//
