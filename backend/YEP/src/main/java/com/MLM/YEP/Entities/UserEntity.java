@@ -21,7 +21,7 @@ public class UserEntity {
     private String email ;
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private ReferralCodeEntity referralCode ;
-    private TYPE userType ;
+//    private TYPE userType ;
 }
 
 

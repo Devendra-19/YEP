@@ -36,7 +36,11 @@ public class ECOM_Service {
             throws IOException {
         ProductEntity newProduct = new ProductEntity() ;
         String url = imageProcessingService.generateURL(image, name) ;
-
-        return null ;
+        newProduct.setName(name);
+        newProduct.setDescription(description);
+        newProduct.setUrl(url);
+        newProduct.setPrice(price);
+        productRepository.save(newProduct);
+        return new Products(newProduct) ;
     }
 }

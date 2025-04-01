@@ -10,7 +10,6 @@ import java.nio.file.Paths;
 @Service
 public class ImageProcessingService{
     final private String UPLOAD_DIR = "uploads/" ;
-
     public ImageProcessingService() throws IOException {
         Files.createDirectories(Paths.get(UPLOAD_DIR)) ;
     }
