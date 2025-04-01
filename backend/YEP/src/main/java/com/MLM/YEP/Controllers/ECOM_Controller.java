@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
+@RequestMapping("/product")
 public class ECOM_Controller {
     final private ECOM_Service ecomService ;
 
