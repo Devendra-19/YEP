@@ -43,4 +43,14 @@ public class ECOM_Service {
         productRepository.save(newProduct);
         return new Products(newProduct) ;
     }
+
+    public List<Products> getProductByCategory(String category) {
+        return productRepository.findAllByCategory(category)
+                .stream().map(product-> new Products(
+                        product.getName() ,
+                        product.getDescription(),
+                        product.getPrice(),
+                        product.getUrl()
+                )).collect(Collectors.toList());
+    }
 }

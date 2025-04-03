@@ -30,4 +30,10 @@ public class ECOM_Controller {
                                         @RequestParam("image")MultipartFile image) throws IOException {
         return ResponseEntity.ok(ecomService.addProduct(name, description, price, image)) ;
     }
+
+
+    @GetMapping("/{category}")
+    ResponseEntity<List<Products>> getProductByCategory(@PathVariable String category){
+        return ResponseEntity.ok(ecomService.getProductByCategory(category)) ;
+    }
 }

@@ -17,6 +17,7 @@ public class ProductEntity {
     private String description ;
     private Double price ;
     private String url ;
+    private String category ;
 //    private Boolean isDeleted ;
 //    private Date createdAt ;
 //    private Date updatedAt ;
